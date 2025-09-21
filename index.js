@@ -63,6 +63,11 @@ app.use("/bookingservice", createProxyMiddleware({
 
 
 // route setup
+
+app.get("/", (req, res) => {
+    res.send("hello");
+})
+
 app.get("/home", (req, res) => {
     return res.status(200).json({
         message: "OK"
